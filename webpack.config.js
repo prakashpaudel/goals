@@ -34,8 +34,6 @@ module.exports = {
   postcss: function () {
     return [
       require('autoprefixer')({ browsers: ['last 2 versions'] }),
-      require('postcss-initial')({reset: 'inherited'}),
-      require('postcss-autoreset')({reset: 'initial'}),
     ];
   },
   devServer: {

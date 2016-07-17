@@ -1,13 +1,12 @@
 import React, { Component } from 'react';
-import styles from './Main.scss';
-import GoalsList from './GoalsList';
-import SearchBar from './SearchBar';
+import styles from './styles.scss';
+import GoalsList from './GoalsList/GoalsList';
+import SearchBar from './SearchBar/SearchBar';
 
 export default class Main extends Component {
   render() {
     return (
-      <div>
-        <div className={styles.red}>Main</div>
+      <div className={styles.container}>
         <SearchBar />
         <GoalsList />
       </div>

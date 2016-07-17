@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import styles from './Streamable.scss';
+import styles from './styles.scss';
 
 export default class Streamable extends Component {
   render() {
