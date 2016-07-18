@@ -7,7 +7,7 @@ export default class GoalDetails extends Component {
     return (
       <div className={styles.container}>
         <p>{player}, ({teamFor}) v {teamAgainst} <span className="pull-right">{time}' {scoreFor}-{scoreAgainst}</span></p>
-        <p>{competition}, {date}</p>
+        <p>{competition}, {date.format("MMM D, YYYY")}</p>
       </div>
     );
   }
@@ -18,7 +18,7 @@ GoalDetails.propTypes = {
   player: PropTypes.string.isRequired,
   teamFor: PropTypes.string.isRequired,
   teamAgainst: PropTypes.string.isRequired,
-  date: PropTypes.string.isRequired,
+  date: PropTypes.object.isRequired,
   competition: PropTypes.string.isRequired,
   time: PropTypes.number.isRequired,
   scoreFor: PropTypes.number.isRequired,
