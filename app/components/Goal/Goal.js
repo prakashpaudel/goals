@@ -22,7 +22,7 @@ Goal.propTypes = {
   player: PropTypes.string.isRequired,
   teamFor: PropTypes.string.isRequired,
   teamAgainst: PropTypes.string.isRequired,
-  date: PropTypes.string.isRequired,
+  date: PropTypes.object.isRequired,
   competition: PropTypes.string.isRequired,
   time: PropTypes.number.isRequired,
   scoreFor: PropTypes.number.isRequired,
