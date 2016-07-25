@@ -19,12 +19,12 @@ export default class Goal extends Component {
 
 Goal.propTypes = {
   streamableId: PropTypes.string.isRequired,
-  player: PropTypes.string.isRequired,
-  teamFor: PropTypes.string.isRequired,
-  teamAgainst: PropTypes.string.isRequired,
   date: PropTypes.object.isRequired,
-  competition: PropTypes.string.isRequired,
-  time: PropTypes.number.isRequired,
-  scoreFor: PropTypes.number.isRequired,
-  scoreAgainst: PropTypes.number.isRequired,
+  // player: PropTypes.string.isRequired,
+  // teamFor: PropTypes.string.isRequired,
+  // teamAgainst: PropTypes.string.isRequired,
+  // competition: PropTypes.string.isRequired,
+  // time: PropTypes.number.isRequired,
+  // scoreFor: PropTypes.number.isRequired,
+  // scoreAgainst: PropTypes.number.isRequired,
 };

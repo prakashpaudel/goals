@@ -1,8 +1,11 @@
 import React, { Component } from 'react';
 import styles from './styles.scss';
 import Goal from '../Goal/Goal';
-import goals from '../goals';
+// import goals from '../goals';
+import { parse } from './streamableParser';
+
 require('reddit.js/reddit.min.js');
+import moment from 'moment';
 
 export default class GoalsList extends Component {
   constructor(props){
@@ -19,9 +22,12 @@ export default class GoalsList extends Component {
     .fetch((res => {
       let goals = res.data.children;
       goals = goals.map(goal => {
+        const { title, url, created_utc } = goal.data
+        const streamableId = parse(url);
         return {
-          title: goal.data.title,
-          url: goal.data.url,
+          title: title,
+          streamableId: streamableId,
+          date: moment.unix(created_utc),
           data: goal.data
         };
       });
@@ -33,7 +39,8 @@ export default class GoalsList extends Component {
     }));
   }
   render() {
-    console.log('goals', this.state.goals)
+    const { goals } = this.state;
+    console.log(goals)
     return (
       <div className={styles.list}>
         {goals.map(goal => 
